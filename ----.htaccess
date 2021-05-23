@@ -1,0 +1,47 @@
+RewriteEngine on
+
+## BELOW APPLIES ON REMOTE SERVER ONLY
+#Header set Access-Control-Allow-Origin "*"
+
+#Header set Access-Control-Allow-Headers "Content-Type"
+#Header set Access-Control-Allow-Methods "GET"
+
+RewriteRule ^starters/(\d+)$ starters.php?id=$1 [NC,L]
+RewriteRule ^_drinks/(\d+)$ index.html [NC,L]
+RewriteRule _drinks _drinks.php [NC,L]
+RewriteRule home index.php?p=home [NC,L]
+# RewriteRule starters starters.php [NC,L]
+# RewriteRule soups soups.php [NC,L]
+# RewriteRule chicken chicken.php [NC,L]
+# RewriteRule pork pork.php [NC,L]
+# RewriteRule beef beef.php [NC,L]
+# RewriteRule seafood seafood.php [NC,L]
+# RewriteRule .php [NC,L]
+RewriteRule main_menu index.php?p=menu [NC,L]
+RewriteRule set_and_lunch_menus index.php?p=sets [NC,L]
+#RewriteRule drinks index.php?p=drinks [NC,L]
+RewriteRule location index.php?p=location [NC,L]
+# RewriteRule what/the/hell test.php [NC,L]
+
+# RewriteRule ^(any|one|of|these|starters)$ $1.php [NC,L]
+
+RewriteRule Main_menu index.php?p=menu [NC,L]
+RewriteRule Set_and_Lunch_Menus index.php?p=sets [NC,L]
+#RewriteRule Drinks index.html [NC,L]
+#RewriteRule Drinks index.php?p=drinks [NC,L]
+RewriteRule Locate_Us index.php?p=location [NC,L]
+RewriteRule update_starters update_starters.php [NC,L]
+
+# [-\w] means to include a hyphen and alphanumeric, + means one or more
+# of those in the square brackets
+RewriteRule ^details/([-\w]+)$ details.php?item=$1.php [NC,L]
+
+# \d means to include a digit, + means one or more digits
+RewriteRule ^details/(\d+)$ details.php?item_id=$1.php [NC,L]
+
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# with the above, below also works by using (.+) $1.php [NC,L], as long as the file name is not the same as any folder
+RewriteRule (.+) $1.php [NC,L]

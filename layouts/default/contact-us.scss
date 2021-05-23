@@ -1,0 +1,124 @@
+$colour: #c4d195;
+$colour2: darken($colour, 10);
+.contact-us {
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  padding: 0 20px;
+  // height: 100%;
+  // text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .submitted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+    background-color: #615d5d;
+    border-radius: 10px;
+    letter-spacing: 4px;
+    text-align: center;
+  }
+}
+form {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #000;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  background-color: lighten($colour, 10);
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    border: 0px solid #000;
+    justify-content: flex-start;
+
+    label,
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid #a8a7a7;
+    }
+    label {
+      padding-left: 0;
+      border: 0;
+      flex-basis: 20%;
+    }
+    input,
+    textarea {
+      background-color: $colour;
+      flex-basis: 50%;
+
+      &:focus {
+        outline: none;
+        background-color: $colour2;
+      }
+    }
+  }
+  .actions {
+    button {
+      cursor: pointer;
+      margin-bottom: 5px;
+      padding: 7px 15px;
+      border: 1px solid rgb(140, 206, 146);
+      background-color: $colour;
+      &:hover {
+        background-color: $colour2;
+      }
+    }
+  }
+}
+@media (min-width: 600px) {
+  form {
+    .group {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 5px 0;
+      label {
+        margin-left: 2em;
+        text-align: right;
+      }
+      input,
+      textarea {
+        margin-right: 6em;
+      }
+    }
+    .actions {
+      justify-content: center;
+      button {
+        margin-right: 7px;
+        border-radius: 7px;
+        outline: none;
+      }
+      button.disabled {
+        cursor: not-allowed;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+@media (min-width: 700px) {
+  form {
+    width: 90%;
+    .group {
+      label {
+        margin-left: 8em;
+      }
+    }
+  }
+}
+@media (min-width: 850px) {
+  form {
+    width: 750px;
+  }
+}

@@ -1,0 +1,60 @@
+table {
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 1px solid rgb(211, 210, 210);
+
+  th {
+    border-bottom: 1px solid rgb(177, 177, 177);
+    font-weight: normal;
+    color: grey;
+  }
+  tr {
+    th {
+      text-align: left;
+    }
+    vertical-align: top;
+    background-color: #ffffffe7;
+    &:nth-child(odd) {
+      background-color: #ececece7;
+    }
+    td,
+    th {
+      padding: 5px 10px;
+    }
+    td span {
+      display: block;
+      padding-top: 7px;
+      font-family: Georgia;
+    }
+    .row_number {
+      width: 7px;
+      color: #999;
+      // background-color: #fff;
+    }
+    .description {
+      width: 50%;
+    }
+    td.price,
+    th.price {
+      // padding-right: 0;
+      text-align: right;
+      min-width: 70px;
+      font-family: Georgia;
+    }
+    td span {
+      color: red;
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+    td span.wine-price,
+    .price {
+      text-align: right;
+    }
+    td .wine-price i {
+      font-style: normal;
+      font-family: Georgia;
+    }
+  }
+}

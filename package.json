@@ -1,0 +1,27 @@
+{
+  "name": "pavilion",
+  "version": "1.0.0",
+  "description": "My impressive Nuxt.js project",
+  "author": "Naz Sharid",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --hostname 0.0.0.0 --port 1114",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/vuetify": "0.5.5",
+    "bootstrap-vue": "^2.14.0",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^8.0.2",
+    "vue-material-design-icons": "^4.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  }
+}
