@@ -18,7 +18,10 @@
             class="description"
             v-html="$options.filters.lineBreakNew(menu.description)"
           ></td>
-          <td class="price">{{ Number(menu.price1) | twoPlaces }}</td>
+          <td class="price">
+            {{ Number(menu.price1) | twoPlaces }}
+            <span class="setMenu">per person</span>
+          </td>
         </tr>
       </tbody>
     </table>

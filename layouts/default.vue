@@ -31,6 +31,9 @@ export default {
 </script>
 
 <style lang="scss">
+span .setMenu {
+  color: blue;
+}
 .hide {
   display: none;
 }

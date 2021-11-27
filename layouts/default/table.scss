@@ -47,6 +47,11 @@ table {
       color: red;
       display: inline-block;
       font-size: 1.5rem;
+      &.setMenu {
+        color: inherit;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
     }
     td span.wine-price,
     .price {
